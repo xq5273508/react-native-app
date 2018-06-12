@@ -6,6 +6,7 @@
 
 import {MainComponent} from "../components/main";
 import {CardComponent} from "../components/card";
+import {AudioComponent} from "../components/widgets/Audio";
 
 export const Router = {
   "Main": {
@@ -13,7 +14,6 @@ export const Router = {
     navigationOptions: {
       header: null
     }
-  }, "Card.Component": {
-    screen: CardComponent
-  }
+  }, "Card.Component": CardComponent,
+  "Widget.Audio": AudioComponent
 };
