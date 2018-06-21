@@ -5,8 +5,7 @@
  */
 
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
-import {Touchable, TouchableParamsNormal} from "../../service/utils";
+import {View, Text, TouchableOpacity} from 'react-native';
 import {Icon} from "../utils/icon";
 import propTypes from "prop-types";
 import {AudioService} from "../../service/Audio";
@@ -39,6 +38,9 @@ export class AudioItemComponent extends Component {
         let countDown = this.state.countDown;
         countDown = countDown - 1;
         if (countDown <= 0) {
+          this.setState({
+            timer: 0,
+          });
           clearInterval(timer);
           countDown = this.props.file.size;
         }
@@ -75,11 +77,11 @@ export class AudioItemComponent extends Component {
       borderBottomColor: "#eee",
       borderBottomWidth: 1,
     }}>
-      <Touchable {...TouchableParamsNormal} style={{flex: 1, paddingLeft: 10,}} onPress={() => {
+      <TouchableOpacity activeOpacity={0.7} style={{flex: 1, paddingLeft: 10,}} onPress={() => {
         this.state.timer ? this.stop() : this.play();
       }}>
         <Icon style={{lineHeight: 50, fontSize: 30, color: "#666"}} name={this.state.timer ? "bofang1" : "bofang"}/>
-      </Touchable>
+      </TouchableOpacity>
       <Text style={{lineHeight: 50, paddingRight: 15,}}>{this.state.countDownFormat}</Text>
     </View>;
   }

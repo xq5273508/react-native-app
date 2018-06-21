@@ -41,14 +41,12 @@ const styles = StyleSheet.create({
       borderColor: "rgba(0, 183, 229, 0.9)",
       borderLeftColor: "rgba(0,0,0,0)",
       borderRightColor: "rgba(0,0,0,0)",
-
       borderRadius: 46,
       elevation: 20,
       shadowOffset: {width: 0, height: 0},
       shadowColor: "#2187e7",
       shadowOpacity: 1,
       shadowRadius: 15,
-
     },
     shadow: {}
   });

@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {View, Text, ScrollView, StyleSheet} from "react-native";
+import {View, Text, ScrollView, StyleSheet, TouchableOpacity} from "react-native";
 import {RecordingView} from "./recording";
 import {AudioService} from "../../service/Audio";
-import {Touchable, TouchableParamsNormal, GlobalStyle} from "../../service/utils";
+import {GlobalStyle} from "../../service/utils";
 import {Icon} from '../utils/icon';
 import {AudioItemComponent} from "./AudioItem";
 
@@ -59,14 +59,12 @@ export class AudioComponent extends Component {
         })}
       </ScrollView>
       <View style={{height: 150, justifyContent: "center", alignItems: "center"}}>
-        <Touchable {...TouchableParamsNormal}
-                   style={{backgroundColor: "#1078FD", height: 100, width: 100, borderRadius: 50, padding: 0}}
-                   onLongPress={this.longPress.bind(this)}
-                   onPressOut={this.pressOut.bind(this)}>
-
-          <Icon style={{fontSize: 40, lineHeight: 100, color: "#fff", textAlign: "center"}} name="shengyin">
-          </Icon>
-        </Touchable></View>
+        <TouchableOpacity activeOpacity={0.7}
+                          style={{backgroundColor: "#1078FD", height: 100, width: 100, borderRadius: 50, padding: 0}}
+                          onLongPress={this.longPress.bind(this)}
+                          onPressOut={this.pressOut.bind(this)}>
+          <Icon style={{fontSize: 40, lineHeight: 100, color: "#fff", textAlign: "center"}} name="shengyin"/>
+        </TouchableOpacity></View>
       {this.state.animated ? <RecordingView/> : null}
     </View>);
   }

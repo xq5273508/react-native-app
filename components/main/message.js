@@ -13,11 +13,10 @@ export class MessageComponent extends Component {
   render() {
     return <View style={GlobalStyle.container}>
       <Touchable {...TouchableParams}
-                 style={{paddingTop: 20, paddingLeft: 20}}
                  onPress={(() => {
                    this.props.navigation.push("Page.Audio");
                  }).bind(this)}>
-        <View style={{width: 50, height: 50}}><Text>录音</Text></View>
+        <View style={{width: 50, height: 50,paddingTop: 20, paddingLeft: 20,}}><Text>录音</Text></View>
       </Touchable>
     </View>;
   }
