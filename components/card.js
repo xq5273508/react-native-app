@@ -8,7 +8,7 @@ import React, {Component} from 'react';
 import {View, Text, Image, Platform, StatusBar} from 'react-native';
 import {Icon} from './utils/icon';
 
-import {Touchable, TouchableParams} from "./utils/utils";
+import {Touchable, TouchableParams} from "../service/utils";
 
 export class CardComponent extends Component {
   static navigationOptions() {

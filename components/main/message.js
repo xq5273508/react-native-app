@@ -5,20 +5,18 @@
  */
 
 import React, {Component} from 'react';
-import {View, TouchableOpacity, Text, Platform} from 'react-native';
-import {PageStyle, Touchable, TouchableParams} from "../utils/utils";
+import {View, Text,} from 'react-native';
+import {GlobalStyle, Touchable, TouchableParams} from "../../service/utils";
 
 export class MessageComponent extends Component {
+
   render() {
-    return <View style={PageStyle.container}>
-      <Touchable {...TouchableParams} onPress={(() => {
-        this.props.navigation.push("Card.Component");
-      }).bind(this)}>
-        <View style={{width: 100, height: 50}}><Text>点击跳转新页</Text></View>
-      </Touchable>
-      <Touchable {...TouchableParams} onPress={(() => {
-        this.props.navigation.push("Widget.Audio");
-      }).bind(this)}>
+    return <View style={GlobalStyle.container}>
+      <Touchable {...TouchableParams}
+                 style={{paddingTop: 20, paddingLeft: 20}}
+                 onPress={(() => {
+                   this.props.navigation.push("Page.Audio");
+                 }).bind(this)}>
         <View style={{width: 50, height: 50}}><Text>录音</Text></View>
       </Touchable>
     </View>;

@@ -12,6 +12,7 @@ import {
 
 import Sound from 'react-native-sound';
 import {AudioRecorder, AudioUtils} from 'react-native-audio';
+import {guid} from "../../service/utils";
 
 export class AudioComponent extends Component {
 
@@ -21,7 +22,7 @@ export class AudioComponent extends Component {
     paused: false,
     stoppedRecording: false,
     finished: false,
-    audioPath: AudioUtils.DocumentDirectoryPath + '/test.aac',
+    audioPath: AudioUtils.DocumentDirectoryPath + '/' + guid() + '.aac',
     hasPermission: undefined,
   };
 

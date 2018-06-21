@@ -1,4 +1,7 @@
 export const FontCode = {
+  "bofang": "\ue708",
+  "bofang1": "\ue607",
+  "zanting": "\ue68b",
   "you": "\ue636",
   "zuo": "\ue639",
   "man": "\ue637",

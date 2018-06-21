@@ -7,7 +7,7 @@
 import React, {Component} from 'react';
 import {View, Text, Platform, StyleSheet} from 'react-native';
 import {Icon} from "../utils/icon";
-import {Touchable, TouchableParams} from "../utils/utils";
+import {Touchable, TouchableParams} from "../../service/utils";
 import PropTypes from "prop-types";
 
 const styles = StyleSheet.create({
@@ -47,7 +47,7 @@ export class SearchComponent extends Component {
   static defaultProps = {
     onAddClick() {
     }
-  }
+  };
 
   render() {
     return <View style={styles.search}>

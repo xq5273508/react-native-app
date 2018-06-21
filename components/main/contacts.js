@@ -6,11 +6,11 @@
 
 import React, {Component} from 'react';
 import {View, Platform} from 'react-native';
-import {PageStyle} from "../utils/utils";
+import {GlobalStyle} from "../../service/utils";
 
 export class ContactsComponent extends Component {
   render() {
-    return <View style={PageStyle.container}>
+    return <View style={GlobalStyle.container}>
     </View>;
   }
 }

@@ -14,7 +14,7 @@ import {ContactsComponent} from "./main/contacts";
 import {MyComponent} from "./main/my";
 import {SearchComponent} from "./main/search";
 import Popover from "./utils/popover";
-import {windowSize} from "./utils/utils";
+import {windowSize} from "../service/utils";
 import {Icon} from "./utils/icon";
 
 const TabsComponent = createBottomTabNavigator({

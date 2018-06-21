@@ -9,7 +9,7 @@ import {
   Platform, View, Text, Image, StyleSheet, Dimensions, ScrollView
 } from 'react-native';
 import {getCommon, getMod} from "../../service/main/menu";
-import {PageStyle, Touchable, TouchableParams} from "../utils/utils";
+import {GlobalStyle, Touchable, TouchableParams} from "../../service/utils";
 
 const styles = StyleSheet.create({
   container: {
@@ -59,8 +59,14 @@ export class WorkComponent extends Component {
     });
   }
 
+  to(_page) {
+    this.props.navigation.push(_page);
+  }
+
   menuRender(_menu) {
-    return <Touchable {...TouchableParams} key={_menu.action}>
+    return <Touchable {...TouchableParams} key={_menu.action} onPress={() => {
+      this.to(_menu.action);
+    }}>
       <View style={styles.menu}>
         <Image style={styles.menu_icon} source={_menu.icon}></Image>
         <Text style={styles.menu_title}>{_menu.title}</Text>
@@ -71,7 +77,7 @@ export class WorkComponent extends Component {
 
   render() {
     const {commons, mods} = this.state;
-    return <View style={PageStyle.container}>
+    return <View style={GlobalStyle.container}>
       <ScrollView style={{flex: 1}}>
         <View>
           <View style={[styles.container]}>

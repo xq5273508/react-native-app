@@ -18,7 +18,10 @@ import {
 } from "react-native";
 import {createStackNavigator} from "react-navigation";
 
-YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader', 'You should only render one navigator explicitly in your app']);
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader',
+  'Module AudioRecorderManager requires main queue setup since it overrides `constantsToExport` but doesn\'t implement `requiresMainQueueSetup`',
+  'You should only render one navigator explicitly in your app']);
+
 
 import {Router} from "./router/router";
 //

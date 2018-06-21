@@ -1,5 +1,9 @@
 export async function getCommon() {
   return [{
+    title: "录音",
+    icon: require("../../images/voice-record.png"),
+    action: "Page.Audio"
+  },{
     title: "扫一扫",
     icon: require("../../images/scan_fun.png"),
     action: "scan"
