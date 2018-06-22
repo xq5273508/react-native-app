@@ -35,8 +35,8 @@ export class AudioItemComponent extends Component {
   }
 
   componentWillUnmount() {
-    EventHubs.removeListener("onSoundStop", this.onSoundStop);
     this.stop();
+    EventHubs.removeListener("onSoundStop", this.onSoundStop);
   }
 
   componentDidMount() {
