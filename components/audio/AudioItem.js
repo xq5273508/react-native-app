@@ -40,7 +40,7 @@ export class AudioItemComponent extends Component {
   }
 
   componentDidMount() {
-    this.onSoundStop = EventHubs.addListener("onSoundStop", (playerKey) => {
+    this.onSoundStop = (playerKey) => {
       if (this.state.sound && playerKey === this.state.sound._key) {
         if (this.state.timer) {
           clearInterval(this.state.timer);
@@ -54,7 +54,8 @@ export class AudioItemComponent extends Component {
           });
         }
       }
-    });
+    };
+    EventHubs.addListener("onSoundStop", this.onSoundStop);
   }
 
   play() {
