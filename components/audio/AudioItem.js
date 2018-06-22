@@ -8,7 +8,8 @@ import React, {Component} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {Icon} from "../utils/icon";
 import propTypes from "prop-types";
-import {AudioService} from "../../service/Audio";
+import {SoundService} from "../../service/Sound";
+import {EventHubs} from "../../service/EventHubs";
 
 function Format(number) {
   return (number > 9 ? "" : "0") + number;
@@ -29,7 +30,31 @@ export class AudioItemComponent extends Component {
       countDown: props.file.size,
       countDownFormat: TimeFormat(props.file.size),
       timer: 0,
+      sound: null,
     };
+  }
+
+  componentWillUnmount() {
+    EventHubs.removeListener("onSoundStop", this.onSoundStop);
+    this.stop();
+  }
+
+  componentDidMount() {
+    this.onSoundStop = EventHubs.addListener("onSoundStop", (playerKey) => {
+      if (this.state.sound && playerKey === this.state.sound._key) {
+        if (this.state.timer) {
+          clearInterval(this.state.timer);
+          const countDown = this.props.file.size;
+          const countDownFormat = TimeFormat(countDown);
+          this.setState({
+            timer: 0,
+            countDownFormat,
+            countDown,
+            sound: null
+          });
+        }
+      }
+    });
   }
 
   play() {
@@ -50,7 +75,12 @@ export class AudioItemComponent extends Component {
           countDown,
         });
       }, 1000);
-      AudioService.play(this.props.file.path);
+      SoundService.stop();
+      SoundService.play(this.props.file.path).then(sound => {
+        this.setState({
+          sound
+        });
+      });
       this.setState({
         timer,
       });
@@ -58,16 +88,7 @@ export class AudioItemComponent extends Component {
   }
 
   stop() {
-    if (this.state.timer) {
-      clearInterval(this.state.timer);
-      const countDown = this.props.file.size;
-      const countDownFormat = TimeFormat(countDown);
-      this.setState({
-        timer: 0,
-        countDownFormat,
-        countDown,
-      });
-    }
+    SoundService.stop(this.state.sound);
   }
 
   render() {

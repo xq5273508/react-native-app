@@ -106,28 +106,6 @@ export class AudioService {
       console.error(error);
     }
   }
-
-  static play(_path) {
-    if (!_path) {
-      return;
-    }
-    setTimeout(() => {
-      const sound = new Sound(_path, '', (error) => {
-        if (error) {
-          console.log('failed to load the sound', error);
-        }
-      });
-      setTimeout(() => {
-        sound.play((success) => {
-          if (success) {
-            console.log('successfully finished playing');
-          } else {
-            console.log('playback failed due to audio decoding errors');
-          }
-        });
-      }, 100);
-    }, 100);
-  }
 }
 
 AudioRecorder.onProgress = (data) => {
