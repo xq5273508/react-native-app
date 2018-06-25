@@ -22,6 +22,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		1D5073C50A1A45A08B8279FF /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAEAA3C02BFE4BC783FE6B12 /* libRNCamera.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -40,6 +41,7 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		DCBD614520E0D24500783EC7 /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBD614020E0D06100783EC7 /* libART.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -330,6 +332,27 @@
 			remoteGlobalIDString = 19825A1E1BD4A89800EE0337;
 			remoteInfo = RNSound;
 		};
+		DCBD613820E0CFEF00783EC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3E11A5C8AEA48A9ABDE9064 /* RNCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RNCamera;
+		};
+		DCBD613F20E0D06100783EC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCBD613A20E0D06100783EC7 /* ART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = ART;
+		};
+		DCBD614120E0D06100783EC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCBD613A20E0D06100783EC7 /* ART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 323A12871E5F266B004975B8;
+			remoteInfo = "ART-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -362,7 +385,10 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B5B26C3E8F4243D994BC12A9 /* libRNSound.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSound.a; sourceTree = "<group>"; };
+		BAEAA3C02BFE4BC783FE6B12 /* libRNCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCamera.a; sourceTree = "<group>"; };
+		DCBD613A20E0D06100783EC7 /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
 		E35ADCD0F74947E384FD51F4 /* libRNAudio.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNAudio.a; sourceTree = "<group>"; };
+		E3E11A5C8AEA48A9ABDE9064 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +404,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBD614520E0D24500783EC7 /* libART.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -393,6 +420,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				43A940A69BB5430C8E97662C /* libRNAudio.a in Frameworks */,
 				3E9F0CE8D3C24F499D4C20B2 /* libRNSound.a in Frameworks */,
+				1D5073C50A1A45A08B8279FF /* libRNCamera.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +595,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				DCBD613A20E0D06100783EC7 /* ART.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -581,6 +610,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				480115FA0303426BAFC35E62 /* RNAudio.xcodeproj */,
 				1654438FD98C4995A86E84DD /* RNSound.xcodeproj */,
+				E3E11A5C8AEA48A9ABDE9064 /* RNCamera.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -634,6 +664,7 @@
 			children = (
 				E35ADCD0F74947E384FD51F4 /* libRNAudio.a */,
 				B5B26C3E8F4243D994BC12A9 /* libRNSound.a */,
+				BAEAA3C02BFE4BC783FE6B12 /* libRNCamera.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -650,6 +681,23 @@
 			isa = PBXGroup;
 			children = (
 				DCAD9FDD20DB7926002D31FD /* libRNSound.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCBD613520E0CFED00783EC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCBD613920E0CFEF00783EC7 /* libRNCamera.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCBD613B20E0D06100783EC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCBD614020E0D06100783EC7 /* libART.a */,
+				DCBD614220E0D06100783EC7 /* libART-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -766,6 +814,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = DCBD613B20E0D06100783EC7 /* Products */;
+					ProjectRef = DCBD613A20E0D06100783EC7 /* ART.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
 				},
@@ -816,6 +868,10 @@
 				{
 					ProductGroup = DCAD9FD420DB7924002D31FD /* Products */;
 					ProjectRef = 480115FA0303426BAFC35E62 /* RNAudio.xcodeproj */;
+				},
+				{
+					ProductGroup = DCBD613520E0CFED00783EC7 /* Products */;
+					ProjectRef = E3E11A5C8AEA48A9ABDE9064 /* RNCamera.xcodeproj */;
 				},
 				{
 					ProductGroup = DCAD9FD620DB7924002D31FD /* Products */;
@@ -1106,6 +1162,27 @@
 			remoteRef = DCAD9FDC20DB7926002D31FD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		DCBD613920E0CFEF00783EC7 /* libRNCamera.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCamera.a;
+			remoteRef = DCBD613820E0CFEF00783EC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DCBD614020E0D06100783EC7 /* libART.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libART.a;
+			remoteRef = DCBD613F20E0D06100783EC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DCBD614220E0D06100783EC7 /* libART-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libART-tvOS.a";
+			remoteRef = DCBD614120E0D06100783EC7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1248,12 +1325,14 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 				);
 				INFOPLIST_FILE = appTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1275,12 +1354,14 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 				);
 				INFOPLIST_FILE = appTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1303,6 +1384,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 				);
 				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1325,6 +1407,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 				);
 				INFOPLIST_FILE = app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1354,11 +1437,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 				);
 				INFOPLIST_FILE = "app-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1390,11 +1475,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 				);
 				INFOPLIST_FILE = "app-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1425,11 +1512,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 				);
 				INFOPLIST_FILE = "app-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1460,11 +1549,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-audio/ios",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
 				);
 				INFOPLIST_FILE = "app-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

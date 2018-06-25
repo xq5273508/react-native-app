@@ -9,7 +9,6 @@ import {View, Text,} from 'react-native';
 import {GlobalStyle, Touchable, TouchableParams} from "../../service/utils";
 
 export class MessageComponent extends Component {
-
   render() {
     return <View style={GlobalStyle.container}>
       <Touchable {...TouchableParams}
@@ -17,6 +16,18 @@ export class MessageComponent extends Component {
                    this.props.navigation.push("Page.Audio");
                  }).bind(this)}>
         <View style={{width: 50, height: 50,paddingTop: 20, paddingLeft: 20,}}><Text>录音</Text></View>
+      </Touchable>
+      <Touchable {...TouchableParams}
+                 onPress={(() => {
+                   this.props.navigation.push("Page.Camera");
+                 }).bind(this)}>
+        <View style={{width: 50, height: 50,paddingTop: 20, paddingLeft: 20,}}><Text>拍照</Text></View>
+      </Touchable>
+      <Touchable {...TouchableParams}
+                 onPress={(() => {
+                   this.props.navigation.push("Page.Scan");
+                 }).bind(this)}>
+        <View style={{width: 50, height: 50,paddingTop: 20, paddingLeft: 20,}}><Text>扫码</Text></View>
       </Touchable>
     </View>;
   }
