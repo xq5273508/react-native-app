@@ -7,6 +7,11 @@ const eventEmitter = new ReactNative.NativeEventEmitter(RNSound);
 
 const Pool = [];
 
+function StopSound(_sound) {
+  _sound.stop();
+  EventHubs.emit("onSoundStop", _sound._key);
+}
+
 export class SoundService {
   static async play(_path) {
     return new Promise((resolve, reject) => {
@@ -38,26 +43,27 @@ export class SoundService {
 
   static stop(_sound) {
     if (_sound) {
-      _sound.stop();
-      EventHubs.emit("onSoundStop", _sound._key);
+      StopSound(_sound);
+      const _index = Pool.findIndex(_item => _item === _sound);
+      ~_index && Pool.splice(_index, 1);
     }
     else {
-      Pool.forEach(_sound => {
-        _sound.stop();
-        EventHubs.emit("onSoundStop", _sound._key);
+      Pool.forEach((_sound, _index) => {
+        StopSound(_sound);
+        Pool.splice(_index, 1);
       });
     }
   }
 }
 
-eventEmitter.addListener(
-  'onPlayChange',
-  (param) => {
-    const {isPlaying, playerKey} = param;
-    if (!isPlaying) {
-      const _index = Pool.findIndex(_item => _item._key === playerKey);
-      ~_index && Pool.splice(_index, 1);
-      EventHubs.emit("onSoundStop", playerKey);
-    }
-  },
-);
+// eventEmitter.addListener(
+//   'onPlayChange',
+//   (param) => {
+//     const {isPlaying, playerKey} = param;
+//     if (!isPlaying) {
+//       const _index = Pool.findIndex(_item => _item._key === playerKey);
+//       ~_index && Pool.splice(_index, 1);
+//       EventHubs.emit("onSoundStop", playerKey);
+//     }
+//   },
+// );

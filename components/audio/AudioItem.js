@@ -89,7 +89,7 @@ export class AudioItemComponent extends Component {
   }
 
   stop() {
-    SoundService.stop(this.state.sound);
+    SoundService.stop();
   }
 
   render() {
