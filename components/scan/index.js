@@ -16,6 +16,10 @@ import {RNCamera} from 'react-native-camera';
 
 
 export class ScanComponent extends Component {
+  static navigationOptions = {
+    header: null,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
