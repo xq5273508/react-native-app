@@ -18,10 +18,8 @@ export class AudioComponent extends Component {
     recording: false,
   };
 
-  longPress() {
-    AudioService.record().then(() => {
-      console.log("recording", Date.now())
-    });
+  onPressIn() {
+    AudioService.record();
     this.setState({
       recording: true,
     });
@@ -33,9 +31,11 @@ export class AudioComponent extends Component {
         recording: false,
       });
       AudioService.stop().then((file) => {
-        const files = this.state.files;
-        files.push(file);
-        this.setState({files})
+        if (file.size >= 1) {
+          const files = this.state.files;
+          files.push(file);
+          this.setState({files})
+        }
       }, error => {
         console.warn(error);
       });
@@ -61,7 +61,7 @@ export class AudioComponent extends Component {
           style={{
             alignSelf: 'center',
           }}
-          onLongPress={this.longPress.bind(this)}
+          onPressIn={this.onPressIn.bind(this)}
           onPressOut={this.onAnimationComplete.bind(this)}>
           <CountDownComponent
             start={this.state.recording}

@@ -1,4 +1,3 @@
-import Sound from "react-native-sound";
 import {AudioRecorder, AudioUtils} from "react-native-audio";
 import {PermissionsAndroid, Platform} from "react-native";
 import {guid} from "./utils";
@@ -32,12 +31,12 @@ function prepareRecordingPath(file) {
 
 // let recording = false;
 // let paused = false;
+
 let file;
 
 class AudioFile {
-
   constructor(name = guid()) {
-    this.state = 0;//0:stop,1:recording,2:paused;success
+    this.state = 0;//0:stop 1:recording 2:paused;    success
     this.name = name;
     this.path = AudioUtils.DocumentDirectoryPath + '/' + this.name + '.aac';
     this.ext = "aac";

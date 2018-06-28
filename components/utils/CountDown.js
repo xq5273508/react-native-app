@@ -50,7 +50,7 @@ export class CountDownComponent extends Component {
       clearInterval(this.state.timer);
       this.setState({
         timer: 0,
-        // process: 0,
+        process: 0,
       });
       this.props.onAnimationComplete();
     }
